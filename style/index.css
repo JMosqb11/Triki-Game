@@ -10,5 +10,65 @@
 .header{
     display: flex;
     justify-content: center;
-    
+    margin: 1.5rem 0;
+}
+
+.box{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: inset 0px 1px 4px 0px rgba(0,0,0,0.4);
+    padding: 1.4rem;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.btn{
+    width: calc(100% / 3);
+    height: 10rem;
+    border-radius: 1.5rem;
+    border: 1px solid rgb(44, 44, 44);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(219, 217, 217);
+}
+
+.result{
+    text-align: center;
+    text-transform: uppercase
+}
+
+.reset{
+    text-align: center;
+    margin: 10px 0;
+}
+
+#reset{
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 100px;
+    height: 60px;
+    margin: 10px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+#reset:hover{
+    background-color: black;
+    color: white;
 }
