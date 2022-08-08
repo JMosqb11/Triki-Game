@@ -13,5 +13,18 @@ let condiciones = [
     [2, 5, 8],
     [2, 4, 6],
     [0, 4, 8],
-
 ]
+
+// desde acá empieza la logica
+
+const triki = (element,i)=>{
+    element.value = jugadorActual;
+    element.disable = true;
+    celdas[i] = jugadorActual
+    jugadorActual = jugadorActual == 'X' ? 'O' : 'X';
+    resultado.innerHTML = `PLAYER ${jugadorActual} TURN`
+}
+
+botones.forEach((boton,indice) => {
+    boton.addEventListener('click',()=>{triki(boton,indice)})
+});
