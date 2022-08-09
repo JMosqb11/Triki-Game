@@ -17,7 +17,7 @@ let condiciones = [
 
 // desde acá empieza la logica
 
-const triki = (element,i)=>{
+const triki = (element, i) => {
     element.value = jugadorActual;
     element.disable = true;
     celdas[i] = jugadorActual
@@ -31,32 +31,32 @@ const triki = (element,i)=>{
         let b = celdas[condicion[1]]
         let c = celdas[condicion[2]]
 
-        if (a=="" || b=="" || c=="") {
+        if (a == "" || b == "" || c == "") {
             continue;
-        }
+        };
 
-        if (a==b && b==c) {
-            resultado.innerHTML=`JUGADOR ${a} GANÓ😁`
-            botones.forEach((btn)=>{btn.disabled=true})
-        }
-    }
+        if (a == b && b == c) {
+            resultado.innerHTML = `JUGADOR ${a} GANÓ😁`
+            botones.forEach((btn) => { btn.disabled = true })
+        };
+    };
 };
 
-const reset=()=>{
-    let celdas = ['', '', '', '', '', '', '', '', '']
-    botones.forEach(element=>{
-        element.value='';
+const reset = () => {
+    celdas = ['', '', '', '', '', '', '', '', '']
+    botones.forEach(element => {
+        element.value = '';
         element.disabled = false;
     })
 
     jugadorActual = 'X'
-    resultado.innerHTML=`PLAYER ${jugadorActual} TURN`
+    resultado.innerHTML = `PLAYER ${jugadorActual} TURN`
 }
 
-//document.querySelector('#reset').addEventListener('click',reset)
+document.querySelector('#reset').addEventListener('click',reset)
 
-botones.forEach((boton,indice) => {
-    boton.addEventListener('click',()=>{triki(boton,indice)})
+botones.forEach((boton, indice) => {
+    boton.addEventListener('click', () => { triki(boton, indice) })
 });
 
 
